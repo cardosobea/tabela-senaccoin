@@ -1,0 +1,18 @@
+<p-table [value]="senacCoins" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Id</th>
+      <th>Data</th>
+      <th>Valor</th>
+      <!-- <th>Destino</th> -->
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-senacCoin>
+    <tr>
+      <td>{{ senacCoin.id }}</td>
+      <td>{{ senacCoin.data }}</td>
+      <td>{{ senacCoin.valor | currency : "BRL" }}</td>
+      <!-- <td>{{ senacCoin.destino }}</td> -->
+    </tr>
+  </ng-template>
+</p-table>
